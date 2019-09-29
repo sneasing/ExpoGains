@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-import { Text, TextInput, View } from 'react-native';
+import { Text, TextInput, View, Button } from 'react-native';
 
 export default class WorkoutCreation extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {text: ''};
-  }
 
-  render() {
-    return (
-      <View style={{padding: 10}}>
-        <TextInput
-          style={{height: 40}}
-          placeholder="Type here to translate!"
-          onChangeText={(text) => this.setState({text})}
-          value={this.state.text}
-        />
-        <Text style={{padding: 10, fontSize: 42}}>
-          {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
-        </Text>
-      </View>
-    );
-  }
+    render() {
+        return (
+            <View style={{ padding: 10, justifyContent: "space-around", flexDirection: 'column' }}>
+                <View style={{height:50}}>
+                    <TextInput
+                        style={{ height: 40 }}
+                        placeholder="Enter Workout Name"
+                    />
+                </View>
+                <View style={{height:50}}>
+
+                    <Button title="Add Exercise" />
+                </View>
+                <View>
+
+                    <Button title="Save Workout" />
+                </View>
+
+            </View>
+        );
+    }
 }
+

@@ -22,7 +22,7 @@ export default class ProfileIcon extends Component {
                 >
                     <Image
                         style={{ width: 50, height: 50 }}
-                        source={require('../assets/profileDefault.png')}
+                        source={require('../assets/michael.jpg')}
 
                     />
                 </TouchableOpacity>
